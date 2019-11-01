@@ -1,0 +1,25 @@
+{
+  "name": "maze-generator",
+  "version": "0.0.1",
+  "description": "a plugin that generates a maze",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Border-Line/maze-generator.git"
+  },
+  "keywords": [
+    "maze",
+    "generator",
+    "js",
+    "plugin"
+  ],
+  "author": "river z",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Border-Line/maze-generator/issues"
+  },
+  "homepage": "https://github.com/Border-Line/maze-generator#readme"
+}
