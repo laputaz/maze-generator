@@ -2,70 +2,17 @@
 
 <script type="module">
   import createMaze from "../index.js";
-  createMaze("app");
+  createMaze({
+    el: "#app",
+    gridSize: 10
+  });
 </script>
 <style>
   #app {
-    width: 670;
-    height: 670px;
+    width: 300px;
     border-radius: 100%;
-    border: 1px solid;
-    cursor: pointer;
+    height: 300px;
+    margin: 0 auto;
+    place-items: center / center;
   }
 </style>
-<!-- <style>
-  .grid {
-    --size: 630px;
-    --n: 48;
-    display: grid;
-    height: var(--size);
-    border: 2px solid;
-    width: var(--size);
-    margin: 0 auto;
-    grid-template-columns: repeat(var(--n), 1fr);
-    grid-template-rows: repeat(var(--n), 1fr);
-    gap: 1px;
-    overflow: hidden;
-    border-radius: 100%;
-    grid-auto-flow: row dense;
-    cursor: pointer;
-  }
-  .cell {
-    grid-column-start: span 3;
-    grid-row-start: span 3;
-    position: relative;
-  }
-  .cell::before {
-    transform: rotate(var(--deg));
-    content: "";
-    display: block;
-    width: 3px;
-    background-color: black;
-    margin: 0 auto;
-    height: 148.5%;
-    transition: all var(--second);
-    will-change: transform;
-  }
-</style>
-<script>
-  const createMaze = selector => {
-    let grid = document.querySelector(".grid");
-    let cells = document.querySelectorAll(".cell");
-    //   let randomNum = () => Math.round(Math.random() * 29) + 1;
-    let randomNum = () => [1, 2, 3][Math.round(Math.random() * 2)];
-    let randomDeg = () =>
-      ["45deg", "135deg", "225deg", "315deg"][Math.round(Math.random() * 3)];
-    cells.forEach(el => {
-      let n = randomNum();
-      el.style.setProperty("--cellspan", n);
-      el.style.setProperty("--deg", randomDeg());
-      el.style.setProperty("--second", `${Math.random() * 0.5}s`);
-      el.style.setProperty("--content", `"${n}"`);
-    });
-    grid.onclick = e => {
-      cells.forEach(el => {
-        el.style.setProperty("--deg", randomDeg());
-      });
-    };
-  };
-</script> -->
