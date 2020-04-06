@@ -2,4 +2,4 @@
 a plugin that generates a maze.
 
 ## Demo   
-![img](docs/for-demo.gif)
+![img](./docs/for-demo.gif)
